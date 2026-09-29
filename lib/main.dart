@@ -80,7 +80,7 @@ class MeuCrachaApp extends StatelessWidget {
                   'Desenvolvedor Mobile Flutter / SENAI',
                   style: TextStyle(
                     color: Colors.white70,
-                    // TODO: Inserir fontStyle: FontStyle.italic
+                    fontStyle: FontStyle.italic,
                   ),
                 ),
                 
