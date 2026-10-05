@@ -1,8 +1,4 @@
-//#   PROVA PRÁTICA (29/09/2026) — `prova_cracha_app`
-
-//### Estrutura do Código da Avaliação (`lib/main.dart`)
-
-//    *(Você aluno deve copiar a pasta `prova_cracha_app` e completar os desafios abaixo)*
+// # PROVA PRÁTICA 1 - Aula 03 (29/09/2026) — `prova_cracha_app` — GABARITO COMPLETO
 
 import 'package:flutter/material.dart';
 
@@ -30,18 +26,20 @@ class MeuCrachaApp extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               boxShadow: const [
-                BoxShadow(color: Colors.black26, blurRadius: 8),
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 8,
+                ),
               ],
-              
+
               // ===============================================================
-              // DESAFIO 5 (3 PONTOS) - DECORAÇÃO E GRADIENTE
-              // Configure o fundo com LinearGradient aplicando
-              // Colors.indigo e Colors.blueAccent.
+              // SOLUÇÃO DESAFIO 5 (3 PONTOS)
+              // DECORAÇÃO E GRADIENTE
               // ===============================================================
               gradient: const LinearGradient(
                 colors: [
-                  Colors.indigo
-		  Colors.BlueAccent,
+                  Colors.indigo, // Cor 1
+                  Colors.blueAccent, // Cor 2
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -50,19 +48,20 @@ class MeuCrachaApp extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                
+
                 // ===============================================================
-                // DESAFIO 1 (3 PONTOS) - FOTO DE PERFIL
-                // Adicione a imagem via NetworkImage no CircleAvatar.
+                // SOLUÇÃO DESAFIO 1 (3 PONTOS)
+                // FOTO DE PERFIL
                 // ===============================================================
                 const CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(
-		    'https://github.com/identicons/user.png',
+                    'https://github.com/identicons/IsaacGoncalves01.png',
+                  ),
                 ),
-              ),
+
                 const SizedBox(height: 15),
-                
+
                 const Text(
                   'Isaac Gonçalves da Silva Lima',
                   style: TextStyle(
@@ -71,10 +70,10 @@ class MeuCrachaApp extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                
+
                 // ===============================================================
-                // DESAFIO 2 (3 PONTOS) - ESTILIZAÇÃO E BIOGRAFIA
-                // Adicione a propriedade para fonte em itálico (fontStyle).
+                // SOLUÇÃO DESAFIO 2 (3 PONTOS)
+                // ESTILIZAÇÃO E BIOGRAFIA
                 // ===============================================================
                 const Text(
                   'Desenvolvedor Mobile Flutter / SENAI',
@@ -83,15 +82,18 @@ class MeuCrachaApp extends StatelessWidget {
                     fontStyle: FontStyle.italic,
                   ),
                 ),
-                
-                const Divider(color: Colors.white38, height: 30),
-                
+
+                const Divider(
+                  color: Colors.white38,
+                  height: 30,
+                ),
+
                 // ===============================================================
-                // DESAFIO 3 (3 PONTOS) - ALINHAMENTO DE SKILLS (ROW)
-                // Alinhe ao centro e crie os 3 Chips: 'Dart', 'Flutter', 'Git'.
+                // SOLUÇÃO DESAFIO 3 (3 PONTOS)
+                // ALINHAMENTO DE SKILLS (ROW)
                 // ===============================================================
                 const Row(
-                  mainAxisAlignment: MainAxisAlignment.center.
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Chip(label: Text('Dart')),
                     SizedBox(width: 5),
@@ -100,12 +102,14 @@ class MeuCrachaApp extends StatelessWidget {
                     Chip(label: Text('Git')),
                   ],
                 ),
-                
+
                 const SizedBox(height: 15),
-                
+
                 // ===============================================================
-                // DESAFIO 4 (3 PONTOS) - COMPILAÇÃO E ESTRUTURA
-                // Garanta que o projeto prova_cracha_app compila sem erros no Debian.
+                // DESAFIO 4 (3 PONTOS)
+                // COMPILAÇÃO E ESTRUTURA
+                // O código deve compilar perfeitamente sem erros de sintaxe
+                // no Debian/Shell.
                 // ===============================================================
               ],
             ),
@@ -115,16 +119,3 @@ class MeuCrachaApp extends StatelessWidget {
     );
   }
 }
-
-// ### Formulário de Coleta (Google Forms - 29/09)
-
-// No formulário de entrega, você aluno deve enviar:
-
-// 1. **Seu Nome Completo**
-
-// 2. **Link do Repositório GitHub:** `[https://github.com/USUARIO/prova_cracha_app](https://github.com/USUARIO/prova_cracha_app)`
-
-// 3. **Upload do arquivo `main.dart**`
-
-// 4. **Upload do Captura de Tela (Print)** do app rodando no servidor Debian (`http://<IP_DEBIAN>:8080`). Obs. Importante ! Caso NÃO funcione na porta 8080, troque a porta por outra, por exemplo, 8081....
-
